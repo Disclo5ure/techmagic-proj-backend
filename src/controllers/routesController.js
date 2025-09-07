@@ -27,9 +27,9 @@ export class RoutesController {
     let allRoutes;
     try {
       allRoutes = await Route.find({});
+      res.json(allRoutes);
     } catch (e) {
       throw ApiError.internal();
     }
-    res.json(allRoutes);
   }
 }

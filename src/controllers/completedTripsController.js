@@ -23,9 +23,9 @@ export class CompletedTripsController {
     let allTrips;
     try {
       allTrips = await CompletedTrip.find({});
+      res.json(allTrips);
     } catch (e) {
       throw ApiError.internal();
     }
-    res.json(allTrips);
   }
 }

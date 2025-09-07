@@ -22,9 +22,9 @@ export class DriversController {
     let allDrivers;
     try {
       allDrivers = await Driver.find({});
+      res.json(allDrivers);
     } catch (e) {
       throw ApiError.internal();
     }
-    res.json(allDrivers);
   }
 }
