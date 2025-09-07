@@ -4,6 +4,6 @@ const routesRouter = Router();
 
 routesRouter.post("/createRoute", RoutesController.createRoute);
 
-routesRouter.get("/getAllRoutes", RoutesController.getRoutes);
+routesRouter.get("/getAllRoutes", RoutesController.getAllRoutes);
 
 export default routesRouter;

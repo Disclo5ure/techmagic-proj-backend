@@ -9,6 +9,6 @@ import completedTripsRouter from "./completedTripsRouter.js";
 router.use("/user", userRouter);
 router.use("/drivers", AuthMiddleware, driversRouter);
 router.use("/routes", AuthMiddleware, routesRouter);
-router.use("/trips", AuthMiddleware, completedTripsRouter);
+// router.use("/trips", AuthMiddleware, completedTripsRouter);
 
 export default router;
