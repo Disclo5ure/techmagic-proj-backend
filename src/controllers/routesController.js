@@ -23,6 +23,17 @@ export class RoutesController {
     }
   }
 
+  static async getRoute(req, res, next) {
+    const { _id } = req.body;
+    let routeInDb;
+    try {
+      routeInDb = await Route.find({ _id });
+      res.json(routeInDb);
+    } catch (e) {
+      throw ApiError.internal();
+    }
+  }
+
   static async getAllRoutes(req, res, next) {
     let allRoutes;
     try {
