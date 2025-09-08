@@ -1,20 +1,30 @@
 import { ApiError } from "../errors/ApiError.js";
 import { CompletedTrip } from "../schemas/CompletedTripSchema.js";
+import { Driver } from "../schemas/DriverSchema.js";
+import { Route } from "../schemas/RouteSchema.js";
 
 export class CompletedTripsController {
   static async createTrip(req, res, next) {
-    const { driver, route, startDate, endDate, cost } = req.body;
+    const { route, drivers, startDate, endDate, bounty } = req.body;
     let tripInDb;
     try {
+      const driversPromises = drivers.map(
+        async (driverId) => await Driver.findById(driverId),
+      );
+      const driversForTrip = await Promise.all(driversPromises);
+      const routeForTrip = await Route.findById(route);
+      console.log(driversForTrip);
+      console.log(routeForTrip);
       tripInDb = await CompletedTrip.create({
-        driver,
-        route,
+        route: routeForTrip,
+        drivers: driversForTrip,
         startDate,
         endDate,
-        cost,
+        bounty,
       });
       res.json(tripInDb);
     } catch (e) {
+      console.log(e);
       throw ApiError.internal();
     }
   }

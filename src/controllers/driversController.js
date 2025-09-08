@@ -18,6 +18,17 @@ export class DriversController {
     }
   }
 
+  static async getDriver(req, res, next) {
+    const { _id } = req.body;
+    let driverInDb;
+    try {
+      driverInDb = await Driver.find({ _id });
+      res.json(driverInDb);
+    } catch (e) {
+      throw ApiError.internal();
+    }
+  }
+
   static async getAllDrivers(req, res, next) {
     let allDrivers;
     try {

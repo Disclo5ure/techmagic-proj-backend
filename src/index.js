@@ -4,6 +4,7 @@ import "dotenv/config";
 import cors from "cors";
 import router from "./routes/index.js";
 import { ErrorHandlingMiddleware } from "./middlewares/ErrorHandlingMiddleware.js";
+import { swaggerDocs, swaggerUi } from "./swagger.js";
 
 const port = process.env.PORT;
 
@@ -29,6 +30,8 @@ app.use(ErrorHandlingMiddleware);
 //   console.log(user);
 // };
 // start();
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

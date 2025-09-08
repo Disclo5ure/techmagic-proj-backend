@@ -1,11 +1,27 @@
 import { model, Schema } from "mongoose";
 
 const CompletedTripSchema = new Schema({
-  route: { type: String, ref: "routes" },
-  driver: { type: String, ref: "drivers" },
+  route: {
+    _id: String,
+    name: String,
+    distance: Number,
+    days: Number,
+    bounty: Number,
+    __v: Number,
+  },
+  drivers: [
+    {
+      _id: String,
+      surname: String,
+      name: String,
+      patronymic: String,
+      experience: Number,
+      __v: Number,
+    },
+  ],
   startDate: Date,
   endDate: Date,
-  cost: Number,
+  bounty: Number,
 });
 
 export const CompletedTrip = model("CompletedTrip", CompletedTripSchema);
