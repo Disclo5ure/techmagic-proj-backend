@@ -28,9 +28,9 @@ export class UserController {
 
   static async loginUser(req, res, next) {
     const { email, password } = req.body;
-    // if (!email || !password) {
-    //   throw ApiError.badRequest("Invalid email or password");
-    // }
+    if (!email || !password) {
+      throw ApiError.badRequest("Invalid email or password");
+    }
     const user = await User.findOne({ email });
     if (user) {
       if (!bcrypt.compareSync(password, user.password)) {

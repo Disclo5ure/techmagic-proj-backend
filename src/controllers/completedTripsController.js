@@ -13,8 +13,6 @@ export class CompletedTripsController {
       );
       const driversForTrip = await Promise.all(driversPromises);
       const routeForTrip = await Route.findById(route);
-      console.log(driversForTrip);
-      console.log(routeForTrip);
       tripInDb = await CompletedTrip.create({
         route: routeForTrip,
         drivers: driversForTrip,
@@ -24,7 +22,16 @@ export class CompletedTripsController {
       });
       res.json(tripInDb);
     } catch (e) {
-      console.log(e);
+      throw ApiError.internal();
+    }
+  }
+
+  static async deleteTrip(req, res, next) {
+    const { _id } = req.body;
+    try {
+      await CompletedTrip.findByIdAndDelete(_id);
+      res.json({ message: "Trip deleted" });
+    } catch (e) {
       throw ApiError.internal();
     }
   }
