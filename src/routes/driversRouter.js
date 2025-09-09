@@ -86,6 +86,37 @@ driversRouter.get("/getDriver", DriversController.getDriver);
 
 /**
  * @openapi
+ * /routes/deleteDriver:
+ *   delete:
+ *     summary: Delete a driver by ID
+ *     tags:
+ *      - Drivers
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               _id:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Success message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Driver deleted"
+ */
+
+driversRouter.delete("/deleteDriver", DriversController.deleteDriver);
+
+/**
+ * @openapi
  * /drivers/getAllDrivers:
  *   get:
  *     summary: Get all drivers

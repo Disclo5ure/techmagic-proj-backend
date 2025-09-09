@@ -29,6 +29,16 @@ export class DriversController {
     }
   }
 
+  static async deleteDriver(req, res, next) {
+    const { _id } = req.body;
+    try {
+      await Driver.findByIdAndDelete(_id);
+      res.json({ message: "Driver deleted" });
+    } catch (e) {
+      throw ApiError.internal();
+    }
+  }
+
   static async getAllDrivers(req, res, next) {
     let allDrivers;
     try {

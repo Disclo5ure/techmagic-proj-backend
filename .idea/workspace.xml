@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2586b175-797c-49d1-a145-6ede85f00ed0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/swagger.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/completedTripsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/completedTripsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/driversController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/driversController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/routesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/routesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/completedTripsRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/completedTripsRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/driversRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/driversRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/routesRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routesRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/CompletedTripSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/CompletedTripSchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feature/finalize" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,6 +98,8 @@
       <workItem from="1757175489081" duration="1276000" />
       <workItem from="1757231287189" duration="11434000" />
       <workItem from="1757315936035" duration="18171000" />
+      <workItem from="1757370546817" duration="1020000" />
+      <workItem from="1757398295056" duration="2077000" />
     </task>
     <servers />
   </component>

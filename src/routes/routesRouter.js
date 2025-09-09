@@ -86,6 +86,37 @@ routesRouter.get("/getRoute", RoutesController.getRoute);
 
 /**
  * @openapi
+ * /routes/deleteRoute:
+ *   delete:
+ *     summary: Delete a route by ID
+ *     tags:
+ *      - Routes
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               _id:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Success message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Route deleted"
+ */
+
+routesRouter.delete("/deleteRoute", RoutesController.deleteRoute);
+
+/**
+ * @openapi
  * /routes/getAllRoutes:
  *   get:
  *     summary: Get all routes

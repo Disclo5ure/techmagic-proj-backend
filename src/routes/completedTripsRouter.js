@@ -85,6 +85,37 @@ completedTripsRouter.post("/createTrip", CompletedTripsController.createTrip);
 
 /**
  * @openapi
+ * /trips/deleteTrip:
+ *   delete:
+ *     summary: Delete a trip by ID
+ *     tags:
+ *      - Trips
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               _id:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Success message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Trip deleted"
+ */
+
+completedTripsRouter.delete("/deleteTrip", CompletedTripsController.deleteTrip);
+
+/**
+ * @openapi
  * /trips/getAllTrips:
  *   get:
  *     summary: Get all trips

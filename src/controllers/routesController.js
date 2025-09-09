@@ -34,6 +34,16 @@ export class RoutesController {
     }
   }
 
+  static async deleteRoute(req, res, next) {
+    const { _id } = req.body;
+    try {
+      await Route.findByIdAndDelete(_id);
+      res.json({ message: "Route deleted" });
+    } catch (e) {
+      throw ApiError.internal();
+    }
+  }
+
   static async getAllRoutes(req, res, next) {
     let allRoutes;
     try {
